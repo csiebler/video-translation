@@ -4,7 +4,7 @@ This repo shows how video content, e.g. learning videos, can be translated using
 
 ## Instructions
 
-Create a `Video Indexer` and `Azure Speech` resource in your azure subscription. Then create a `.env` and paste the following settings:
+Create a `Video Indexer` and `Azure Speech` resource in your azure subscription. Then rename `.env.example` to `.env` and update the following settings:
 
 ```
 LOCATION=xxxxxxx
