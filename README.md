@@ -23,6 +23,12 @@ OUTPUT_PROCESSED_SUBTITLES_PATH=output_processed_subtitles
 
 Replace `LOCATION`, `ACCOUNT_ID`, `ACCOUNT_NAME` and `RESOURCE_ID` with your Video Indexer details. Then update `SPEECH_API_URL` and `SPEECH_API_KEY` with your Speech resource details.
 
-Then create a folder named `input_videos` and upload a few videos files you want to translate. Then run the scripts in order and translated videos should appear in the `output_videos` folder.
+Then create a folder named `input_videos` and upload a few videos files you want to translate. Then run the scripts in order and translated videos should appear in the `output_videos` folder:
+
+```console
+pip install -f requirements.txt
+python 00_ingest_videos.py
+python 01_... and so on
+```
 
 Optionally, also adapt `settings.yml` if you want to add or remove additional languages. See [supported languages](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=stt-tts#supported-languages) for a full list of speaker voices.
