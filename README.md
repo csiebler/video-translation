@@ -2,6 +2,14 @@
 
 This repo shows how video content, e.g. learning videos, can be translated using Azure Video Indexer and Azure Speech.
 
+![Overview](media/overview.png)
+
+This solution uses:
+
+* Azure Video Indexer to index videos and create subtitles in the source and all destination languages
+* Azure Speech to synthesize translated subtitles back to audio
+* `ffmpeg` and `pydub` to create a full, translated audio track that is (reasonably) in sync with the video
+
 ## Instructions
 
 Create a `Video Indexer` and `Azure Speech` resource in your azure subscription. Then rename `.env.example` to `.env` and update the following settings:
@@ -23,7 +31,7 @@ OUTPUT_PROCESSED_SUBTITLES_PATH=output_processed_subtitles
 
 Replace `LOCATION`, `ACCOUNT_ID`, `ACCOUNT_NAME` and `RESOURCE_ID` with your Video Indexer details. Then update `SPEECH_API_URL` and `SPEECH_API_KEY` with your Speech resource details.
 
-Then create a folder named `input_videos` and upload a few videos files you want to translate. Then run the scripts in order and translated videos should appear in the `output_videos` folder:
+Then create a folder named `input_videos` and upload a few videos files you want to translate. Finally run the scripts in order and your translated videos should appear in the `output_videos` folder:
 
 ```console
 pip install -f requirements.txt
