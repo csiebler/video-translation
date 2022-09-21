@@ -65,12 +65,14 @@ class VideoIndexerHelper:
                 break
         return found
 
-    def get_subtitle_for_video(self, video_id, locale):
+    def get_subtitle_for_video(self, video_id, locale=None):
         params = {
             'accessToken': self.token,
-            'format': 'srt',
-            'language': locale
+            'format': 'srt'
         }
+        
+        if locale is not None:
+            params['language'] = locale
         
         url = f"https://api.videoindexer.ai/{self.location}/Accounts/{self.account_id}/Videos/{video_id}/Captions"
         response = requests.get(url, params=params)

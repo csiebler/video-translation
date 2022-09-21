@@ -16,7 +16,7 @@ for video_id in video_ids:
     Path(f"{output_processed_subtitles_path}/{video_id}/").mkdir(parents=True, exist_ok=True)
     srt_files = os.listdir(f"{output_raw_subtitles_path}/{video_id}")
     print(srt_files)
-    
+       
     # Process all subtitles for the video
     for f in srt_files:
         with open(f"{output_raw_subtitles_path}/{video_id}/{f}", 'r', encoding='utf-8') as file:
@@ -48,7 +48,7 @@ for video_id in video_ids:
         merged_subtitles = []
         i = 0
         while i < len(subtitles):
-            print(f"{i}/{len(subtitles)}")
+            #print(f"{i}/{len(subtitles)}")
             
             current_subtitle = subtitles[i]
             

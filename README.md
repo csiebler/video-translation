@@ -39,4 +39,4 @@ python 00_ingest_videos.py
 python 01_... and so on
 ```
 
-Optionally, also adapt `settings.yml` if you want to add or remove additional languages. See [supported languages](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=stt-tts#supported-languages) for a full list of speaker voices.
+Optionally, also adapt `settings.yml` if you want to add or remove additional languages. See [supported languages](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=stt-tts#supported-languages) for a full list of speaker voices. Furthermore you can use the `overdub_original_audio` setting to determine, if the original audio track should be used in the translated video. In this case, the original track is automatically lowered in volume when the original voice was speaking, and then replaced with the translated, synthesized voice.

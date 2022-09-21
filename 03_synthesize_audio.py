@@ -31,6 +31,7 @@ print(video_ids)
 for video_id in video_ids:
     
     srt_files = os.listdir(f"{output_processed_subtitles_path}/{video_id}")
+    srt_files.remove('original.srt')
     print(srt_files)
     
     for f in srt_files:
